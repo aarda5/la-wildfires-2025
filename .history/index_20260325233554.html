@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LA Wildfires 2025 — 6 Facts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__logo" href="#">LA Wildfires 2025</a>
+
+      <nav class="navbar__links" id="nav-links">
+        <a href="#facts">Facts</a>
+        <a href="#sources">Sources</a>
+      </nav>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="navbar__mobile-menu" id="mobile-menu">
+      <a href="#facts">Facts</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>6 Facts About the LA Wildfires</h1>
+    <p>January 2025 &mdash; Los Angeles, California</p>
+  </section>
+
+  <main class="facts" id="facts">
+    <h2>The Facts</h2>
+
+    <ol class="fact-list">
+
+      <li class="fact-item">
+        <span class="fact-number">01</span>
+        <div class="fact-content">
+          <h3>57,529 Acres Burned</h3>
+          <p>Fourteen wildfires swept across Los Angeles from January 7–31, 2025, scorching over 57,000 acres of urban, canyon, and residential land.</p>
+        </div>
+      </li>
+
+      <li class="fact-item">
+        <span class="fact-number">02</span>
+        <div class="fact-content">
+          <h3>18,000+ Structures Destroyed</h3>
+          <p>More than 18,000 homes and buildings were destroyed. The Palisades Fire alone destroyed 6,837 structures  the most destructive wildfire in LA history.</p>
+        </div>
+      </li>
+
+      <li class="fact-item">
+        <span class="fact-number">03</span>
+        <div class="fact-content">
+          <h3>Winds Reached 100 mph</h3>
+          <p>Hurricane-force Santa Ana winds drove the fires' explosive spread. The region had also gone eight months without measurable rainfall beforehand.</p>
+        </div>
+      </li>
+
+      <li class="fact-item">
+        <span class="fact-number">04</span>
+        <div class="fact-content">
+          <h3>200,000+ People Evacuated</h3>
+          <p>More than 200,000 residents were forced to flee their homes. At peak, over 414,000 Southern California Edison customers also lost power.</p>
+        </div>
+      </li>
+
+      <li class="fact-item">
+        <span class="fact-number">05</span>
+        <div class="fact-content">
+          <h3>~440 Estimated Deaths</h3>
+          <p>The official confirmed toll is 31, but a JAMA study (August 2025) estimated around 440 deaths when accounting for smoke exposure, disrupted healthcare, and stress-related mortality.</p>
+        </div>
+      </li>
+
+      <li class="fact-item">
+        <span class="fact-number">06</span>
+        <div class="fact-content">
+          <h3>Up to $131 Billion in Damage</h3>
+          <p>Total economic losses are estimated between $76B and $131B, placing these fires among the ten costliest disasters in U.S. history. Climate change increased the likelihood of such conditions by 35%.</p>
+        </div>
+      </li>
+
+    </ol>
+  </main>
+
+  
+  <section class="sources" id="sources">
+    <h2>Sources</h2>
+    <ul class="source-list">
+      <li><a href="https://en.wikipedia.org/wiki/January_2025_Southern_California_wildfires" target="_blank" rel="noopener">Wikipedia — January 2025 Southern California Wildfires ↗</a></li>
+      <li><a href="https://www.climate.gov/news-features/event-tracker/weather-and-climate-influences-january-2025-fires-around-los-angeles" target="_blank" rel="noopener">NOAA Climate.gov — Weather &amp; Climate Influences ↗</a></li>
+      <li><a href="https://www.britannica.com/event/Los-Angeles-wildfires-of-2025" target="_blank" rel="noopener">Britannica — Los Angeles Wildfires of 2025 ↗</a></li>
+    </ul>
+  </section>
+
+  
+  <footer class="footer">
+    <p>LA Wildfires 2025 &mdash; All rights reserved.</p>
+    <p class="footer__copy">&copy; 2026</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      hamburger.classList.toggle('is-open');
+      mobileMenu.classList.toggle('is-open');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+      });
+    });
+  </script>
+
+</body>
+</html>
